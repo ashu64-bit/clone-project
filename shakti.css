@@ -1,0 +1,174 @@
+body {
+	font: 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    top: 15%;
+	background: linear-gradient(to right, red , yellow); /* Standard syntax */
+}
+
+/*Background gradient*/
+
+h1 {
+    font: 600 3.5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
+}
+
+h3 {
+	font: 900 1em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+
+}
+
+/**********************************************************************************
+ *GLOWING BUTTON */
+/* **********************************************************************************/
+
+        #btn {
+            padding: 20px 40px;
+            font-size: 1.5em;
+            background: #0c0c0c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.5s;
+            overflow: hidden;
+            align-items: flex-start;
+        }
+
+        #btn:hover {
+            color: #0f0;
+            background: #1a1a1a;
+            box-shadow: 0 0 10px #0f0,
+                        0 0 20px #0f0,
+                        0 0 40px #0f0;
+        }
+
+        #btn::before {
+            content: '';
+            top: 0;
+            left: -800%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(0, 255, 0, 0.4),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        #btn:hover::before {
+            left: 100%;
+        }
+
+        /* Glow animation */
+        @keyframes glow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        #btn {
+            animation: glow 10s linear infinite;
+        }
+
+        /* Optional: Add mouse follow effect */
+        #btn span {
+            z-index: 1;
+        }
+ 
+ #example {
+    background-color: blue;
+
+ }
+ #enter{
+     position: obsolute;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            background: #0c0c0c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.5s;
+  }
+  #enter:hover {
+     color: #0f0;
+            background: #1a1a1a;
+            box-shadow: 0 0 10px #0f0,
+                        0 0 20px #0f0,
+                        0 0 40px #0f0;
+  }
+  #right{
+    background:lightcoral;
+  }
+  p {
+    color: antiquewhite;
+  }
+  
+  #btn{
+background: rgb(2,0,36);
+background: -moz-linear-gradient(90deg, rgba(2,0,36,0.7058473047422094) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(2,0,36,0.7058473047422094) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+background: linear-gradient(90deg, rgba(2,0,36,0.7058473047422094) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
+}
+/* ************************************************************/
+/*  DROPDOWN */
+/********************************************************************/
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+  color: black;
+  padding: 120px 160px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+
+/****************************************************************************
+ * ICON BAR
+ * *********************************************************************************/
+.icon-bar {
+  width: 100%; /* Full-width */
+  background-color: #555; /* Dark-grey background */
+  overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.active {
+  background-color: #04AA6D; /* Add an active/current color */
+}
